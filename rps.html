@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ROCK PAPER SCISSOR</h1>
+    <h3>Choose your choice</h3>
+    <div class="choices">
+        <button onclick="play('stone')">Stone🗿</button>
+        <button onclick="play('paper')">Paper📄</button>
+        <button onclick="play('scissor')">Scissor✂</button>
+    </div>
+    <p id="res"></p>
+    <script>
+        function play(player){
+            const choices=['stone','paper','scissor'];
+            let choice= choices[Math.floor(Math.random()*choices.length)];
+            if(choice===player){
+                document.getElementById("res").innerHTML="DRAW!! Try again..."
+            }
+            else if(player==='rock' && choice==='paper'){
+                document.getElementById("res").innerHTML="Computer wins!!"
+            }
+            else if(player==='rock' && choice==='scissor'){
+                document.getElementById("res").innerHTML="Player wins!!"
+            }
+            else if(player==='scissor' && choice==='paper'){
+                document.getElementById("res").innerHTML="Player wins!!"
+            }             
+            else if(player==='scissor' && choice==='rock'){
+                document.getElementById("res").innerHTML="Computer wins!!"
+            }
+            else if(player==='paper' && choice==='scissor'){
+                document.getElementById("res").innerHTML="Computer wins!!"
+            }
+            else if(player==='paper' && choice==='rock'){
+                document.getElementById("res").innerHTML="player wins!!"
+            }
+        }
+    </script>
+</body>
+</html>
