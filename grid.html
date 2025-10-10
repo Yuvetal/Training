@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            background-color:aquamarine;
+            padding: 20px;
+            gap: 10px;
+        }
+        .container > div{
+            padding: 10px;
+            background-color: aliceblue;
+        }
+        #item1{
+            grid-column: 1/span 5;
+        }
+        #item2{
+            grid-row: 2/ span 2;
+        }
+        #item3{
+            grid-column: 2/ span 4;
+        }
+        #item4{
+            grid-column: auto/span 1;
+        }
+        #item5{
+            grid-column: auto/ 4;
+        }
+        #item6{
+            grid-column: 1/ span 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>
+        <div id="item4">4</div>
+        <div id="item5">5</div>
+        <div id="item6">6</div>
+    </div>
+    <h1 id="change">Click Button</h1>
+    <button onclick="changeText()">button</button>
+    <script>
+        function changeText(){
+            document.getElementById("change").
+            innerHTML="button clicked!!"
+        }
+    </script>
+</body>
+</html>
