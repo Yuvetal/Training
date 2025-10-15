@@ -1,0 +1,43 @@
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000000; /* black background */
+  color: #FFFFFF; /* white text */
+}
+
+/* Links */
+a {
+  color: #1A1AFF; /* dark blue accent */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 8px #1A1AFF;
+}
+
+/* Buttons */
+button {
+  background-color: #1A1AFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px #1A1AFF;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 20px;
+}
