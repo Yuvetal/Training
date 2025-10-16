@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [active, setActive] = useState("Home");
@@ -6,7 +7,17 @@ function Navbar() {
   const navItems = ["Home", "About", "Contact"];
 
   return (
-    <nav style={{ padding: "10px 20px", backgroundColor: "#f5f5f5" }}>
+     <nav
+  style={{
+    padding: "10px 20px",
+    backgroundColor: "#f5f5f5",
+    position: "fixed",      // 👈 makes it stay at top
+    top: 0,                 // 👈 sticks it to the top edge
+    left: 0,
+    width: "100%",          // 👈 full width
+    zIndex: 1000,           // 👈 stays above other elements
+  }}
+>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         {/* Logo */}
         <div style={{ fontWeight: "bold", fontSize: "20px", cursor: "pointer" }}>
@@ -25,7 +36,7 @@ function Navbar() {
               }}
               onClick={() => setActive(item)}
             >
-              <Link to={`/${items}`}>{item}</Link>
+              <Link to={`/${item.toLowerCase()}`}>{item}</Link>
             </li>
           ))}
         </ul>
