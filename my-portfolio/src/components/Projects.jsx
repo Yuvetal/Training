@@ -2,9 +2,11 @@ import React from "react";
 
 function Projects() {
   const projects = [
-    {title:"Project 1", desc:"Short description here", link:"#"},
-    {title:"Project 2", desc:"Short description here", link:"#"},
-    {title:"Project 3", desc:"Short description here", link:"#"},
+    {title:"Transaction Ledger", desc:"A centralized blockchain-based ledger to record, verify, and manage daily transactions securely.", link:"https://github.com/Yuvetal/PyCharmVault"},
+    {title:"Agricultural Produce Supply Chain", desc:"A machine learning model that analyzes text sentiment to determine positivity, negativity, or neutrality in input data. ", link:"https://github.com/Yuvetal/SupplyChain"},
+    {title:"Voice Asistant", desc:"A Python-based voice-controlled assistant capable of executing system commands and fetching AI-powered responses.", link:"https://github.com/Yuvetal/Voice_Assistant"},
+    {title:"Python-Gemini Integration", desc:"Integrated Google Gemini API with Python to enable intelligent automation and data-driven decision-making.", link:"https://github.com/Yuvetal/Gemini_Integration"},
+    {title:"Sentiment Analyser", desc:"A machine learning model that analyzes text sentiment to determine positivity, negativity, or neutrality in input data.", link:"https://github.com/Yuvetal/Sentiment_Analysis"},
   ];
 
   return (
