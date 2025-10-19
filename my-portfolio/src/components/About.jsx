@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section id="about">
+    <section id="about" style={{marginLeft:"150px"}}>
       <h2 style={{color:"#1A1AFF", marginBottom:"20px"}}>About Me</h2>
 <p style={{maxWidth:"700px", color:"#CCCCCC"}}>
   I’m a passionate Frontend Developer who loves creating clean, responsive, and engaging user interfaces.  
