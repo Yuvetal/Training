@@ -36,7 +36,33 @@ function Hero() {
         <div className="hero-text">
           <h1>Hi, I'm Logu Ajith Kumar</h1>
           <p>I'm a {currentText}|</p>
-          <button>See My Work</button>
+          <div className="hero-buttons">
+            <a
+              href="https://github.com/Yuvetal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              See My Work
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/logu-ajith-kumar-859a06293/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn secondary"
+            >
+              LinkedIn
+            </a>
+            
+  <a
+    href="/Resume.pdf"
+    download="Logu_Ajith_Kumar_CV.pdf"
+    className="btn download"
+  >
+    Download CV
+  </a>
+          </div>
         </div>
 
         {/* RIGHT SIDE */}

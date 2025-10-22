@@ -1,12 +1,27 @@
 import React, { useState } from "react";
-
+import emailjs from "emailjs-com";
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+ e.preventDefault();
+
+    emailjs.sendForm(
+      "service_wyrrqe6",
+      "template_ompv01y",
+      e.target,
+      "W-dFzjx-NXal9FQd3"
+    )
+    .then(() => {
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+    })
+    .catch((error) => {
+      console.error("Email Error:", error);
+      alert("Failed to send message. Try again!");
+    });
+
+    e.target.reset();
   };
 
   return (
@@ -19,15 +34,15 @@ function Contact() {
         padding: "25px", borderRadius: "12px",
         boxShadow: "0 0 20px rgba(26,26,255,0.2)"
       }}>
-        <input type="text" placeholder="Your Name" style={{
+        <input type="text" placeholder="Your Name" name="name" style={{
           padding: "12px", borderRadius: "8px", border: "none",
           outline: "none", background: "#0e0e1a", color: "#fff"
         }}/>
-        <input type="email" placeholder="Your Email" style={{
+        <input type="email" placeholder="Your Email" name="email"style={{
           padding: "12px", borderRadius: "8px", border: "none",
           outline: "none", background: "#0e0e1a", color: "#fff"
         }}/>
-        <textarea placeholder="Type your message..." rows="5" style={{
+        <textarea placeholder="Type your message..." name="message"rows="5" style={{
           padding: "12px", borderRadius: "8px", border: "none",
           outline: "none", background: "#0e0e1a", color: "#fff", resize: "none"
         }}/>

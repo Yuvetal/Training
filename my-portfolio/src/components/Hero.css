@@ -8,7 +8,7 @@
   gap: 60px;
   padding: 0 10%;
   overflow: hidden;
-  background: radial-gradient(circle at 20% 20%, #0a0a23 0%, #01010a 100%);
+  background: transparent;
 }
 
 /* Aurora gradient blobs */
@@ -121,4 +121,40 @@
   .hero-text h1 {
     font-size: 2.2rem;
   }
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Reuse same style as button for links */
+.hero-buttons .btn {
+  background: transparent;
+  color: #1a1aff;
+  border: 2px solid #1a1aff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: #1a1aff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #1a1aff80;
+}
+
+/* For secondary (LinkedIn) button */
+.hero-buttons .btn.secondary {
+  border-color: #00bfff;
+  color: #00bfff;
+}
+
+.hero-buttons .btn.secondary:hover {
+  background: #00bfff;
+  color: #fff;
+  box-shadow: 0 0 20px #00bfff80;
 }
