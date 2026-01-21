@@ -7,7 +7,7 @@ import Contact from "./pages/Contact.jsx";
 import Services from "./pages/Services.jsx";
 import Navbar from "./components/Navbar.jsx";
 import User from "./components/User.jsx";
-
+import Effect from "./hooks/Effects.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +30,7 @@ function App() {
             />
           }
         />
+        <Route path="/effect" element={<Effect />} />
       </Routes>
     </>
   );
